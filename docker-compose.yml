@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  zoraxy:
+    image: zoraxy/zoraxy:latest
+    ports:
+      - '4000:4000'
+  coredns:
+    image: coredns/coredns:latest
+    ports:
+      - '8053:53/udp'
+      - '8053:53/tcp'
+  ui:
+    image: python:3.12-slim
+    ports:
+      - '8000:8000'
+    command: ['uvicorn', '--app-dir', '/app', 'main:app', '--host', '0.0.0.0', '--port', '8000']  # Stub for FastAPI, assumes a main.py; update later
