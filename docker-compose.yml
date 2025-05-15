@@ -1,11 +1,4 @@
-version: '3.8'
 services:
-  zoraxy:
-    image: zoraxy/zoraxy:latest
-    ports:
-      - '4000:4000'
-    volumes:
-      - ./zoraxy_config.yaml:/data/config.yaml
   coredns:
     image: coredns/coredns:latest
     ports:
