@@ -4,7 +4,7 @@ dev:                ## start dev stack
 stop:               ## stop stack
 	docker compose down
 
-ci:                 ## lint + tests placeholder
-	echo "TODO: add ruff, pytest, npm tests"
+ci:                 ## lint + tests
+	ruff backend && pytest && npm --prefix ui test
 
 .PHONY: dev stop ci
