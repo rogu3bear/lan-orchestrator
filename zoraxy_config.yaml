@@ -1,0 +1,3 @@
+admin:
+  enabled: false
+config_folder: /data
